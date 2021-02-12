@@ -13,7 +13,7 @@ public class Third {
     
     public static void myMath(){
 
-      System.out.println("Selle funktsiooni saab kasutada ruutu/kuupi ja ruut/kuupjuurt");
+      System.out.println("Selle funktsiooni saab kasutada astendamist ja ruutjuurt");
       System.out.println("sisetage number");
       Scanner scan = new Scanner(System.in);
       int number = scan.nextInt();
