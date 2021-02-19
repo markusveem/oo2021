@@ -1,7 +1,5 @@
 
-//siin on lihtsalt mõned listid, setid ja mapid
-
-
+//siin on lihtsalt mõned listid
 //arraylist
 import java.util.ArrayList; // import the ArrayList class; 
 
