@@ -15,13 +15,6 @@ public class PractiseTest1 {
         numbers.add(number3);
         double average = findAverage(numbers);
         System.out.println(average);
- 
-
-
-        
-
-
-
 
     }
 
