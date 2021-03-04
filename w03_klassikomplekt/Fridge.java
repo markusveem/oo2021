@@ -1,6 +1,6 @@
 public class Fridge {
 
-    //average fridge: later you can change data in main1
+    
     private String name;
     private int height; //cm
     private int width; //cm
