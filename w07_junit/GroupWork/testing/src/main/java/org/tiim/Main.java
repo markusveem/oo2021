@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner sc = new Scanner(System.in);
+    public String name;
+    public String getName() {
+        return name;
+    } 
 
     public static void main(String[] args) throws IOException {
         boolean isGameActive = true;
