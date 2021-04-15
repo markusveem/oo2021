@@ -39,29 +39,29 @@ public class AppTest {
     
 
     @Test
-    public void easypease(){
+    public void easyAtteptedLetters(){
         assertEquals("", easy.attemptedLetters);
     }
 
     @Test 
-    public void esimoisim(){
+    public void esyFails(){
       assertNotEquals(easy.fails, 1);
     }
 
     @Test
-    public void eeeee(){
+    public void easyNotAttemptedLetters(){
         //easy.attemptedLetters = "2";
         assertNotEquals("2", easy.attemptedLetters);
     }
 
     @Test
-    public void iiiii(){
-        assertTrue("jaaa", easy.isWon == false);
+    public void EasyIsWon(){
+        assertTrue("should be false", easy.isWon == false);
        
     }
 
     @Test
-    public void aaaaaa(){
+    public void startingLetters(){
         assertThat(main.input, startsWith("aaaa"));
 
     }
