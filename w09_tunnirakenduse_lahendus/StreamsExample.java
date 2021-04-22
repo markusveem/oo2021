@@ -48,7 +48,7 @@ public class StreamsExample {
         .filter(e -> e <50)
         .forEach(e -> System.out.print(e + " "));*/
 
-       /* IntStream.iterate(1, i -> i * 2).limit(10).forEach(System.out::printIn);*/
+        /*IntStream.iterate(1, i -> i * 2).limit(10).forEach(System.out::printIn);*/
 
 
        /*IntStream.range(1, 9)
@@ -60,7 +60,7 @@ public class StreamsExample {
        .forEach(System.out::print);*/
 
 
-      /* System.out.println(IntStream.of(2,4,6,8,10).allMatch(e -> e % 2 == 0));
+       /*System.out.println(IntStream.of(2,4,6,8,10).allMatch(e -> e % 2 == 0));
 
        //anyMatch suvalised numbrid
        System.out.println(IntStream.of(2,4,6,8,9,10).anyMatch(e -> e % 2 != 0));

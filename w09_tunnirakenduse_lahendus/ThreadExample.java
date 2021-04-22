@@ -7,7 +7,7 @@ public class ThreadExample {
 
             try {
                 new Thread(getRunnable(),names[i]).start();
-                Thread.sleep(500);
+                Thread.sleep(500); // kui peaks see ootama enne kui käivitub (sleep (millisekundites))
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

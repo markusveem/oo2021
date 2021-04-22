@@ -15,9 +15,3 @@ public abstract class Genre {
   }
   
     
-  
-  
-  
-  // Looge uus klass, mis extendib parentit
-  // kasutage super keywordi, kas konstruktoris
-  // või meetodis
