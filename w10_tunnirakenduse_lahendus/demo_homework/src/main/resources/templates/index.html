@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta task="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+</head>
+<body>
+  <div th:switch="${tasks}">
+    <h2 th:case="null">tasks do not exist</h2>
+    <div th:case="*">
+      <table>
+        <thead>
+          <tr>
+            <th>task</th>
+            <th>doDate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="task : ${tasks}">
+            <td th:text="${task.task}"></td>
+            <td th:text="${task.doDate}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p><a href="/addtask">Add a new task</a></p>
+</body>
+</html>
