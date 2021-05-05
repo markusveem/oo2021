@@ -23,27 +23,27 @@ public class TaskController {
   }
 
   @GetMapping("/index")
-  public String showUserList(Model model){
-    model.addAttribute("users", taskRepository.findAll());
+  public String showTaskList(Model model){
+    model.addAttribute("tasks", taskRepository.findAll());
     return "index";
   }
 
-  @GetMapping("/signup")
-  public String showSignUp(Task task){
-    return "signup";
+  @GetMapping("/add")
+  public String showTasks(Task task){
+    return "addtask";
   }
 
-  @PostMapping("/addUser")
+  @PostMapping("/addtask")
   public String addUser(@Valid Task task, BindingResult result, Model model){
     if (result.hasErrors()){
-      return "signup";
+      return "add";
     }
 
     taskRepository.save(task);
     return "redirect:/index";
   }
 
-  @GetMapping("/edit/{id}")
+  /*@GetMapping("/edit/{id}")
   public String showUpdate(@PathVariable("id") long id, Model model){
     Task task = taskRepository.findById(id)
       .orElseThrow(() -> new IllegalArgumentException("No such user with id " + id));
@@ -71,5 +71,5 @@ public class TaskController {
     taskRepository.delete(task);
 
     return "redirect:/index";
-  }
+  }*/
 }

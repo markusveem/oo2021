@@ -7,8 +7,8 @@
   <title>Index</title>
 </head>
 <body>
-  <div th:switch="${tasks}">
-    <h2 th:case="null">tasks do not exist</h2>
+  <div th:switch="${doDos}">
+    <h2 th:case="null">doDos do not exist</h2>
     <div th:case="*">
       <table>
         <thead>
@@ -18,14 +18,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr th:each="task : ${tasks}">
-            <td th:text="${task.task}"></td>
-            <td th:text="${task.doDate}"></td>
+          <tr th:each="doDo : ${doDos}">
+            <td th:text="${doDo.task}"></td>
+            <td th:text="${doDo.doDate}"></td>
+            
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <p><a href="/addtask">Add a new task</a></p>
+  <p><a href="/signup">Add a new doDo</a></p>
 </body>
 </html>

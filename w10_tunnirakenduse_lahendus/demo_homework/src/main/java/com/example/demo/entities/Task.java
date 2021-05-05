@@ -53,6 +53,6 @@ public class Task {
 
   @Override
   public String toString() {
-    return task + " " + doDate;
+    return "Task{" + "id=" + id + ", todo=" + task + ", do date=" + doDate + '}';
   }
 }

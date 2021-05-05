@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta task="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaskManager 9000</title>
+  <title>Task manager 9000</title>
 </head>
 <body>
-  <h1>Add task</h1>
-  <form action="#" th:action="@{/addtask}" th:object="${task}" method="post">
+  <h1>Task manager 9000</h1>
+  <form action="#" th:action="@{/adddoDo}" th:object="${doDo}" method="post">
     <label for="task">task</label>
     <input th:field="*{task}" type="text" task="task" id="task">
     <span th:if="${#fields.hasErrors('task')}" th:errors="*{task}"></span><br/>
-    <label for="doDate">do date</label>
+    <label for="doDate">doDate</label>
     <input th:field="*{doDate}" type="text" task="doDate" id="doDate">
     <span th:if="${#fields.hasErrors('doDate')}" th:errors="*{doDate}"></span><br/>
-    <button type="submit">Add New task</button>
+    <button type="submit">Add New doDo</button>
   </form>
 </body>
 </html>
