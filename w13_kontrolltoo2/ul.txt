@@ -1,6 +1,5 @@
-Sõnade lõputähed
+Mitmerealine maanteeliiklus
 
-Salvesta uurimiseks vähemalt paarileheküljeline tekst.
-* Trüki välja sõnade viimased tähed
-* Väljasta erinevad sõnalõputähed nende esinemissageduse järjekorras
-* Iga lõputähega sõnade jaoks on eraldi fail, kuhu need tekstist kirjutatakse. Luuakse HTML-leht viidetega tekstis esinenud lõputähtedega failidele, iga viite juures arv, mitu korda vastava lõputähega sõna esines.
+* (Failist loetavaks) sisendiks on 10-kilomeetrise maanteelõigu sõidukite kaugused ühest maanteelõigu otspunktist ja kiirused (miinusmärk tähistab vastassuunda). Väljasta kohad, kus sõidukid satuvad kokku (nii päri- kui vastassuunas).
+* Lisaks eelmistele märgi, milliste kokkusaamiste juures pole võimalik teha piisava pikkusvaruga (suurus paku ise) möödasõitu.
+* Kuni möödasõitu pole võimalik teha, senikaua püsib sõiduk eelmise taga. Väljasta autode asukohad sekundi tagant, paar neist kuva joonisena. 
