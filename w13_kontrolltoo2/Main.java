@@ -7,12 +7,13 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) throws IOException {
-      readFile();
+      //readFile();
       anoterFileReader();
+        int roadLenght = 10;
         
     }
 
-    public static void readFile() throws FileNotFoundException {
+   /* public static void readFile() throws FileNotFoundException {
         
 
         File file = new File("tekst.txt");
@@ -21,7 +22,7 @@ public class Main{
         while (scanner.hasNextLine()){ 
             System.out.println(scanner.nextLine()); 
        }
-    }
+    }*/
 
     public static void anoterFileReader() throws IOException {
         
