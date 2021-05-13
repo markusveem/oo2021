@@ -1,0 +1,5 @@
+Mitmerealine maanteeliiklus
+
+* (Failist loetavaks) sisendiks on 10-kilomeetrise maanteelõigu sõidukite kaugused ühest maanteelõigu otspunktist ja kiirused (miinusmärk tähistab vastassuunda). Väljasta kohad, kus sõidukid satuvad kokku (nii päri- kui vastassuunas).
+* Lisaks eelmistele märgi, milliste kokkusaamiste juures pole võimalik teha piisava pikkusvaruga (suurus paku ise) möödasõitu.
+* Kuni möödasõitu pole võimalik teha, senikaua püsib sõiduk eelmise taga. Väljasta autode asukohad sekundi tagant, paar neist kuva joonisena. 

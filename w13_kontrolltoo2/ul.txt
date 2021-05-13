@@ -1,5 +1,19 @@
-Mitmerealine maanteeliiklus
+Salat
 
-* (Failist loetavaks) sisendiks on 10-kilomeetrise maanteelõigu sõidukite kaugused ühest maanteelõigu otspunktist ja kiirused (miinusmärk tähistab vastassuunda). Väljasta kohad, kus sõidukid satuvad kokku (nii päri- kui vastassuunas).
-* Lisaks eelmistele märgi, milliste kokkusaamiste juures pole võimalik teha piisava pikkusvaruga (suurus paku ise) möödasõitu.
-* Kuni möödasõitu pole võimalik teha, senikaua püsib sõiduk eelmise taga. Väljasta autode asukohad sekundi tagant, paar neist kuva joonisena. 
+* Koosta klass toiduaine tarbeks 
+(nimetus, valkude, rasvade ja süsivesikute protsent).
+ Protsent kokku ei saa ületada 100 - muidu antakse veateade.
+  Loo mõni toiduaine (nt. kartul, hapukoor, vorst).
+   Koosta klass toidukomponendi tarbeks (kogus, viit toiduainele).
+    Loo mõned toidukomponendid (nt. 100 g kartuleid, 30 g hapukoort, 50 g vorsti).
+     Lisa toidukomponendile käsklus selle sees leiduva rasvakoguse arvutamiseks. 
+* Koosta andmebaasiliidesega veebileht, kus saab toiduaineid objektide kaudu lisada
+ ja kustutada, nime järgi andmeid vaadata ning rasvaprotsendivahemiku järgi otsida.
+  Koosta lisamise, arvutamise, otsimise ja kustutamise kontrollimiseks automaattest.
+* Koosta klass toidu jaoks (nimetus, toidukomponendid).
+ Toidule käsklused küsimaks sisalduvate valkude, rasvade ja süsivesikute kogust.
+  Loo retsepti järgi toit (nt. kartulisalat),
+     küsi salatis leiduvate toitainete kogused.
+Koosta veebirakendus, kus näidatakse valitud toidu etteantud koguse 
+(nt. 5 kg kartulisalati) jaoks vajalikud toiduained. 
+Kontrolli automaattestiga arvutuste õigsust. 
