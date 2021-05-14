@@ -62,21 +62,23 @@ public class Salat {
 
         Foodcomponent foodcomponent2 = new Foodcomponent();
         Vorst vorst = new Vorst();
-        foodcomponent.amount = 50;
+        foodcomponent2.amount = 50;
 
         Foodcomponent foodcomponent3 = new Foodcomponent();
         Hapukoor hapukoor = new Hapukoor();
-        foodcomponent.amount = 30;
+        foodcomponent3.amount = 30;
 
     System.out.println("rasvakoguse arvutamine...");
+    System.out.println("kartuleid on" +foodcomponent.amount+"g");
+    System.out.println("vorsti on" +foodcomponent2.amount+"g");
+    System.out.println("hapukoort on" +foodcomponent3.amount+"g");
 
-    double rasvakogus1 = kartul.rasv + kartul.rasv * (foodcomponent.amount / 100);
-    double rasvakogus2 = vorst.rasv + vorst.rasv * (foodcomponent2.amount / 100);
-    double rasvakogus3 = hapukoor.rasv + hapukoor.rasv * (foodcomponent3.amount / 100);
 
-    double kogurasv = rasvakogus1 + rasvakogus2 + rasvakogus3;
+    
+    double rasv = kartul.rasv + vorst.rasv + hapukoor.rasv;
+    double kogurasv = foodcomponent.amount + foodcomponent2.amount + foodcomponent3.amount;
 
-    System.out.println(kogurasv);        
+   System.out.println( (rasv / kogurasv) * 100);        
     }
 
     public static void foodRecipe() {
