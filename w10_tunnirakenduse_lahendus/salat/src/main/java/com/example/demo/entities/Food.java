@@ -7,24 +7,24 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-public class User {
+public class Food {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
-  @NotBlank(message = "Must enter a name")
-  private String name;
+  @NotBlank(message = "Must enter a food")
+  private String food;
 
-  @NotBlank(message = "Must enter an e-mail")
-  private String email;
+ /* @NotBlank(message = "Must enter an e-mail")
+  private String email;*/
 
-  public User() {
+  public Food() {
   }
 
-  public User(String name, String email) {
-    this.name = name;
-    this.email = email;
+  public Food(String name) {
+    this.food = food;
+    //this.email = email;
   }
 
   public void setId(long id) {
@@ -35,24 +35,24 @@ public class User {
     return id;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setFood(String food) {
+    this.food = food;
   }
 
-  public void setEmail(String email) {
+  /*public void setEmail(String email) {
     this.email = email;
+  }*/
+
+  public String getFood() {
+    return food;
   }
 
-  public String getName() {
-    return name;
-  }
-
-  public String getEmail() {
+  /*public String getEmail() {
     return email;
-  }
+  }*/
 
   @Override
   public String toString() {
-    return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
+    return "User{" + "id=" + id + ", food=" + food + ", email=" + food + '}';
   }
 }

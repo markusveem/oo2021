@@ -10,6 +10,10 @@ Salat
 * Koosta andmebaasiliidesega veebileht, kus saab toiduaineid objektide kaudu lisada
  ja kustutada, nime järgi andmeid vaadata ning rasvaprotsendivahemiku järgi otsida.
   Koosta lisamise, arvutamise, otsimise ja kustutamise kontrollimiseks automaattest.
+
+
+
+
 * Koosta klass toidu jaoks (nimetus, toidukomponendid).
  Toidule käsklused küsimaks sisalduvate valkude, rasvade ja süsivesikute kogust.
   Loo retsepti järgi toit (nt. kartulisalat),

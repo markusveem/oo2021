@@ -2,7 +2,7 @@ package com.example.demo;
 
 public class Foodcomponent {
     
-    Food food = new Food();
+    FoodClass food = new FoodClass();
 
     double amount; //g
     String foodType;

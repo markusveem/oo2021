@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public class Food {
+public class FoodClass {
     String name;
     double valk; //%
     Double rasv; //%

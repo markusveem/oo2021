@@ -2,8 +2,8 @@ package com.example.demo.controllers;
 
 import javax.validation.Valid;
 
-import com.example.demo.entities.User;
-import com.example.demo.repositories.UserRepository;
+import com.example.demo.FoodClass;
+import com.example.demo.repositories.FoodRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,62 +14,62 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class UserController {
+public class FoodController {
   
-  private final UserRepository userRepository;
+  private final FoodRepository foodRepository;
 
   @Autowired
-  public UserController(UserRepository userRepository){
-    this.userRepository = userRepository;
+  public foodController(FoodRepository userRepository){
+    this.foodRepository = foodRepository;
   }
 
   @GetMapping("/index")
   public String showUserList(Model model){
-    model.addAttribute("users", userRepository.findAll());
+    model.addAttribute("users", foodRepository.findAll());
     return "index";
   }
 
   @GetMapping("/signup")
-  public String showSignUp(User user){
+  public String showSignUp(FoodClass food){
     return "signup";
   }
 
   @PostMapping("/addUser")
-  public String addUser(@Valid User user, BindingResult result, Model model){
+  public String addUser(@Valid FoodClass food, BindingResult result, Model model){
     if (result.hasErrors()){
       return "signup";
     }
 
-    userRepository.save(user);
+    foodRepository.save(food);
     return "redirect:/index";
   }
 
   @GetMapping("/edit/{id}")
   public String showUpdate(@PathVariable("id") long id, Model model){
-    User user = userRepository.findById(id)
+    FoodClass food = foodRepository.findById(id)
       .orElseThrow(() -> new IllegalArgumentException("No such user with id " + id));
-    model.addAttribute("user", user);
+    model.addAttribute("food", food);
 
     return "update";
   }
 
   @PostMapping("/update/{id}")
-  public String updateUser(@PathVariable("id") long id, @Valid User user, BindingResult result, Model model){
+  public String updateUser(@PathVariable("id") long id, @Valid FoodClass food, BindingResult result, Model model){
     if (result.hasErrors()){
       return "update";
     }
 
-    userRepository.save(user);
+    foodRepository.save(food);
 
     return "redirect:/index";
   }
 
   @GetMapping("/delete/{id}")
   public String deleteUser(@PathVariable("id") long id, Model model){
-    User user = userRepository.findById(id)
-      .orElseThrow(() -> new IllegalArgumentException("No such user with id " + id));
+    FoodClass food = foodRepository.findById(id)
+      .orElseThrow(() -> new IllegalArgumentException("No such food with id " + id));
 
-    userRepository.delete(user);
+    foodRepository.delete(food);
 
     return "redirect:/index";
   }

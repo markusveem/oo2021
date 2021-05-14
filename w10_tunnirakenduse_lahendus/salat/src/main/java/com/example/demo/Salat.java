@@ -8,7 +8,7 @@ public class Salat {
 
     public static void insertFood() {
 
-        Food food = new Food();
+        FoodClass food = new FoodClass();
 
         food.name = "kartul";
         food.rasv = 4.0;
@@ -21,7 +21,7 @@ public class Salat {
             System.out.println("viga toidus " + foodnr);
         }
 
-        Food food2 = new Food();
+        FoodClass food2 = new FoodClass();
 
         food2.name = "vorst";
         food2.rasv = 4.0;
