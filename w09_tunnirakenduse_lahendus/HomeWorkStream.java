@@ -1,8 +1,5 @@
 
- /*Luua mingisugune näide lisaks, mis kasutab kuidagi
-reaaleluliselt stream-i näidet, kus kasutad vähemalt
- 5 chaining meetodit, tulemused võiks ka salvestada faili,
-lugeda võib samuti failist.*/
+ 
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,6 +16,8 @@ public class HomeWorkStream {
         new Thread(getAmount(weight)).start();
         new Thread(getAverageWeight(weight)).start();
         new Thread(getOver100(weight)).start();
+        new Thread(getUnder70(weight)).start();
+        new Thread(getOver180(weight)).start();
 
     }
 
@@ -44,7 +43,14 @@ public class HomeWorkStream {
     public static Runnable getOver100(ArrayList<Integer> weight) {
         return () -> {
             int[] ints = weight.stream().mapToInt(i -> i).toArray();
-            System.out.println("Kas oli inimese kes kaalusid alla 50 kilo: " + IntStream.of(ints).anyMatch(e -> e <= 100));
+            System.out.println("Kas oli inimese kes kaalusid üle 70 kilo: " + IntStream.of(ints).anyMatch(e -> e <= 70));
+        };
+    }
+
+    public static Runnable getUnder70(ArrayList<Integer> weight) {
+        return () -> {
+            int[] ints = weight.stream().mapToInt(i -> i).toArray();
+            System.out.println("Kas oli inimese kes kaalusid alla 70 kilo: " + IntStream.of(ints).anyMatch(e -> e <= 70));
         };
     }
 
@@ -55,6 +61,14 @@ public class HomeWorkStream {
             System.out.println("keskmine kaal: " + IntStream.of(ints).average().getAsDouble());
         };
     }
+
+    public static Runnable getOver180(ArrayList<Integer> weight) {
+        return () -> {
+            // how many of them are over 18
+            System.out.println("üle 180 kg: " + weight.stream().filter(e -> e > 180).count() + " ilmselt üle kaalulised");
+        };
+    }
+
 
    
 

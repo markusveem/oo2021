@@ -3,34 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta foodname="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
 </head>
 <body>
   <p> </p>
-  <div th:switch="${users}">
-    <h2 th:case="null">Users do not exist</h2>
+  <div th:switch="${foods}">
+    <h2 th:case="null">Foods do not exist</h2>
     <div th:case="*">
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>foodname</th>
           </tr>
         </thead>
         <tbody>
-          <tr th:each="user : ${users}">
-            <td th:text="${user.name}"></td>
-            <td th:text="${user.email}"></td>
-            <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
-            <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
+          <tr th:each="food : ${foods}">
+            <td th:text="${food.foodname}"></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <p><a href="/signup">Add a new user</a></p>
+  <p><a href="/signup">Add a new food</a></p>
 </body>
 </html>

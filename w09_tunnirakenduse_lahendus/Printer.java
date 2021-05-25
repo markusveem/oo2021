@@ -12,43 +12,25 @@ public class Printer {
    public static void main(String[] args) {
 
     try {
-        new Thread(NumbersDesc(),"numbers Desc").start();
-        new Thread(NumbersAsc(),"Numbers asc").start();
+        new Thread(NumbersDesc(),"").start();
+        new Thread(NumbersAsc(),"").start();
+        new Thread(CharAsc(),"").start();
+        new Thread(CharDesc(),"").start();
+
+        
     } catch (Exception e) {
         System.out.println(e.getMessage());
     }
-
-        //new Thread(CharDesc(),Character.toString((char) (97+i))).start();
-        //new Thread(CharAsc(),Character.toString((char) (107-i))).start();
-       
-    
-    for (int i = 0; i <11; i++){
-
-            try {
-
-                //new Thread(NumbersDesc(),"numbers Desc").start();
-                //new Thread(NumbersAsc(),"Numbers asc").start();
-               /*new Thread(NumbersDesc(),String.valueOf(i)).start();
-                new Thread(NumbersDesc(),String.valueOf(10-i)).start();
-                new Thread(NumbersDesc(),Character.toString((char) (97+i))).start();
-                new Thread(NumbersDesc(),Character.toString((char) (107-i))).start();*/
-                //System.out.println("---");
-                Thread.sleep(2000); // kui peaks see ootama enne kui käivitub (sleep (millisekundites))
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        } 
           
     }
-
    public static Runnable NumbersDesc(){
         return () -> {
           try {
             for (int i =10; i > 0; i--){
                 System.out.print(i + " ");
-                Thread.sleep(2000);
+                Thread.sleep(1000);
+
             }
-                //System.out.println(Thread.currentThread().getName());
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -60,9 +42,9 @@ public class Printer {
             try {
                 for (int i = 1; i <11; i++){
                     System.out.print(i + " ");
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
+
                 }
-                //System.out.println(Thread.currentThread().getName());
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -73,22 +55,29 @@ public class Printer {
     public static Runnable CharAsc(){
         return () -> {
             try {
-                //System.out.println(Thread.currentThread().getName());
-                Thread.sleep(4000);
-                for (int i =97; i <107; i++){
-                    System.out.print(i + " ");
+                for (int i =97; i <108; i++){
+                    //int yourInt = 33;
+                    char ch = (char) i;
+                    System.out.print(ch + " ");
+                    Thread.sleep(1000);
+
+
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         };
     }
-
-
     public static Runnable CharDesc(){
         return () -> {
             try {
-                System.out.println(Thread.currentThread().getName());
+                for (int i = 107; i>96; i--){
+                    char ch = (char) i;
+                    System.out.println(ch+ " ");
+                    Thread.sleep(1000);
+
+
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

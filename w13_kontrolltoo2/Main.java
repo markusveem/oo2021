@@ -1,8 +1,8 @@
-public class Salat {
+public class Main {
     public static void main(String[] args) {
         insertFood();
         Foodcomponents();
-        foodRecipe();
+        //foodRecipe();
         
     }
 
@@ -47,10 +47,10 @@ public class Salat {
             System.out.println("susivesik: " + food2.susivesik);
             System.out.println("valk: " + food2.valk);
             System.out.println(" ");
-
-
-
         }
+
+
+
         
     }
 
@@ -69,17 +69,27 @@ public class Salat {
         foodcomponent3.amount = 30;
 
     System.out.println("rasvakoguse arvutamine...");
-    System.out.println("kartuleid on" +foodcomponent.amount+"g");
-    System.out.println("vorsti on" +foodcomponent2.amount+"g");
-    System.out.println("hapukoort on" +foodcomponent3.amount+"g");
+    System.out.println("kartuleid on " +foodcomponent.amount+" g");
+    System.out.println("vorsti on " +foodcomponent2.amount+" g");
+    System.out.println("hapukoort on " +foodcomponent3.amount+" g");
 
 
     
     double rasv = kartul.rasv + vorst.rasv + hapukoor.rasv;
     double kogurasv = foodcomponent.amount + foodcomponent2.amount + foodcomponent3.amount;
-
-   System.out.println( (rasv / kogurasv) * 100);        
+    
+    double lopprasv = Math.round((rasv / kogurasv) * 100);
+    System.out.println();
+    System.out.println("Kõikede komponentide kogurasv " + lopprasv+" %");        
+   //System.out.println("Kõikede komponentide kogurasv " + (rasv / kogurasv) * 100 +" %");        
     }
+
+
+
+
+
+
+
 
     public static void foodRecipe() {
         Kartulisalat kartulisalat = new Kartulisalat();
