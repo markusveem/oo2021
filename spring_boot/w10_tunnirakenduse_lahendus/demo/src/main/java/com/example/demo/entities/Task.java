@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Entity
 public class Task {
@@ -15,7 +14,6 @@ public class Task {
     private long id;
 
     @NotBlank(message = "Must enter a task")
-    //@Size(min = 10, max = 255, message = "Task must be between 10 and 255 characters")
     private String todo;
 
     @NotBlank(message = "Must enter a description")
